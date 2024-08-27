@@ -2,11 +2,11 @@ import './Mainsection.css'
 import Item from './Item';
 
 
-export default function Mainsection(props){
+export default function Mainsection({items,onDeleteItem}){
     return(
         <div className='mainsection'>
             <ul>
-                {(props.items).map(item=><Item quantity={item.quantity} description={item.description} packed={item.packed} key={item.id}/>)}
+                {(items).map(item=><Item item={item} onDeleteItem={onDeleteItem}  key={item.id}/>)}
             </ul>
         </div>
     );

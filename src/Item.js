@@ -1,15 +1,15 @@
 import './Item.css';
 
-export default function Item(props){
+export default function Item({item,onDeleteItem}){
     return(
         <div className='Item'>
             <li>
-                <input type='checkbox' value={props.packed} id='checkbox'/>
-                <span style={props.packed===true?{textDecoration:"line-through"}:{}}>
-                    {props.quantity}
-                    {props.description}  
+                <input type='checkbox' value={item.packed} id='checkbox'/>
+                <span style={item.packed===true?{textDecoration:"line-through"}:{}}>
+                    {item.quantity}
+                    {item.description}  
                 </span>
-                <button>❌</button>
+                <button onClick={()=>onDeleteItem(item.id)}>❌</button>
             </li>
         </div>
     );

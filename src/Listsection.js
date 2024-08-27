@@ -2,17 +2,19 @@ import './listsection.css';
 import {useState} from 'react';
 
    
-export default function Listsection(props){
+export default function Listsection({onAddItems,}){
 
     const[description,setDescription] = useState("");
     const[quantity,setQuantity] = useState(1);
+    const[count,setCount] = useState(1);
     
 
     function handleAdd(){
-        const  Item = {description,quantity,packed:false,id:Date.now()};
-        props.onAddItems(Item);
+        const  Item = {description,quantity,packed:false,id:count};
+        onAddItems(Item);
         setDescription("");
         setQuantity(1);
+        setCount(count+1);
     }
     
     return(

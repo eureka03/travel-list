@@ -12,12 +12,15 @@ function App() {
   function handleAddItems(item){
     setItems((items)=>[...items,item]);
   }
+  function handleDelete(id){
+    setItems(items=>items.filter(item=>item.id!==id));
+  }
 
   return (
     <div className="App">
       <Header/>
       <Listsection onAddItems={handleAddItems}/>
-      <Mainsection items={items}/>
+      <Mainsection items={items} onDeleteItem={handleDelete}/>
       <Footer/>
     </div>
   );
