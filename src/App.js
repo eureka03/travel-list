@@ -8,6 +8,7 @@ import './App.css';
 
 function App() {
   const[items,setItems] = useState([]);
+  
 
   function handleAddItems(item){
     setItems((items)=>[...items,item]);
@@ -18,13 +19,14 @@ function App() {
   function handleToggleItem(id){
     setItems((items)=>items.map(item=> item.id === id?{...item,packed:!item.packed}:item));
   }
+ 
 
   return (
     <div className="App">
       <Header/>
       <Listsection onAddItems={handleAddItems}/>
       <Mainsection items={items} onDeleteItem={handleDelete} onToggleItem={handleToggleItem}/>
-      <Footer/>
+      <Footer items={items}/>
     </div>
   );
 }
