@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+}
+.Header{
+    background-color:rgb(231, 162, 34);
+    height:120px;
+    text-align:center;
+    padding-top:30px;
+}
+.heading>h1{
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-size:60px;
+    text-transform: capitalize;
+}

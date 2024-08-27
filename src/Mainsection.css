@@ -1,0 +1,13 @@
+.mainsection{
+    height:55vh;
+    background-color:rgb(131, 70, 8);
+  
+}
+.mainsection>ul{
+    display:flex;
+   
+    width:50%;
+    margin:auto;
+    gap:200px;
+    padding-top:20px;
+}
