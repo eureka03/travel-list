@@ -1,11 +1,11 @@
 import './Item.css';
 
-export default function Item({item,onDeleteItem}){
+export default function Item({item,onDeleteItem,onToggleItem}){
     return(
         <div className='Item'>
             <li>
-                <input type='checkbox' value={item.packed} id='checkbox'/>
-                <span style={item.packed===true?{textDecoration:"line-through"}:{}}>
+                <input type='checkbox' value={item.packed} id='checkbox' onChange={()=>onToggleItem(item.id)}/>
+                <span style={item.packed===false?{}:{textDecoration:"line-through"}}>
                     {item.quantity}
                     {item.description}  
                 </span>

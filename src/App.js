@@ -15,12 +15,15 @@ function App() {
   function handleDelete(id){
     setItems(items=>items.filter(item=>item.id!==id));
   }
+  function handleToggleItem(id){
+    setItems((items)=>items.map(item=> item.id === id?{...item,packed:!item.packed}:item));
+  }
 
   return (
     <div className="App">
       <Header/>
       <Listsection onAddItems={handleAddItems}/>
-      <Mainsection items={items} onDeleteItem={handleDelete}/>
+      <Mainsection items={items} onDeleteItem={handleDelete} onToggleItem={handleToggleItem}/>
       <Footer/>
     </div>
   );
