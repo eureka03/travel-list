@@ -2,7 +2,7 @@ import './listsection.css';
 import {useState} from 'react';
 
    
-export default function Listsection({onAddItems,}){
+export default function Listsection({onAddItems}){
 
     const[description,setDescription] = useState("");
     const[quantity,setQuantity] = useState(1);

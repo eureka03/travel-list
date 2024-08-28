@@ -1,3 +1,7 @@
+*{
+    margin:0;
+    padding:0;
+}
 .mainsection{
     height:55vh;
     background-color:rgb(131, 70, 8);
@@ -5,9 +9,38 @@
 }
 .mainsection>ul{
     display:flex;
-   
+    flex-wrap: wrap;
     width:50%;
     margin:auto;
-    gap:200px;
     padding-top:20px;
+}
+.bottomsection{
+    display:flex;
+    margin:250px auto;
+    width:200px;
+}
+.bottomsection>select{
+    background-color:antiquewhite;
+    border:none;
+    border-radius:10px;
+    padding:2px;
+    font-size:10px;
+    font-weight:bold;
+}
+
+.bottomsection>input{
+    background-color:antiquewhite;
+    border:none;
+    border-radius:10px;
+    height:20px;
+    font-size:10px;
+    width:200px;
+    padding:5px;
+    margin-left:10px;
+    cursor:pointer;
+    font-weight:bold;
+
+}
+.listitems{
+    display:flex;
 }

@@ -19,13 +19,16 @@ function App() {
   function handleToggleItem(id){
     setItems((items)=>items.map(item=> item.id === id?{...item,packed:!item.packed}:item));
   }
+  function handleClearList(){
+    setItems([]);
+  }
  
 
   return (
     <div className="App">
       <Header/>
       <Listsection onAddItems={handleAddItems}/>
-      <Mainsection items={items} onDeleteItem={handleDelete} onToggleItem={handleToggleItem}/>
+      <Mainsection items={items} onClearList={handleClearList} onDeleteItem={handleDelete} onToggleItem={handleToggleItem}/>
       <Footer items={items}/>
     </div>
   );
